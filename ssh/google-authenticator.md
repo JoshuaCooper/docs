@@ -5,8 +5,8 @@ sudo apt-get install libpam-google-authenticator -y
 </pre>
 
 ### /etc/pam.d/sshd configuration:
-	Add the following to /etc/pam.d/sshd
-	Ensure '@include common-auth' is removed from /etc/pam.d/sshd
+  Add the following to /etc/pam.d/sshd
+  Ensure '@include common-auth' is removed from /etc/pam.d/sshd
 <pre>
 #@include common-auth
 @include common-password
@@ -19,8 +19,8 @@ sudo vim /etc/pam.d/sshd
 </pre>
 
 ### /etc/ssh/sshd_config configuration:
-	Add the following to /etc/ssh/sshd_config
-	KbdInteractiveAuthentication is defaulted 'no' 
+  Add the following to /etc/ssh/sshd_config
+  KbdInteractiveAuthentication is defaulted 'no' 
 <pre>
 UsePAM yes
 KbdInteractiveAuthentication yes
@@ -44,8 +44,7 @@ google-authenticator
 </pre>
 
 #### Scan the QR code generator with Google Authenticator or Authy and enter the code generated
-
-#### Choose your own options for the next 4 options, I choose Y/Y/Y/Y 
+  Choose your own options for the next 4 options, I choose Y/Y/Y/Y 
 
 <pre>
 Do you want me to update your "/home/jcooper/.google_authenticator" file? (y/n) y
