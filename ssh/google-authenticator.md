@@ -3,11 +3,10 @@
 sudo apt update
 sudo apt-get install libpam-google-authenticator -y
 </pre>
-### /etc/pam.d/sshd configuration
 
-#### Add the following to /etc/pam.d/sshd
-
-#### Ensure '@include common-auth' is removed from /etc/pam.d/sshd
+### /etc/pam.d/sshd configuration:
+	Add the following to /etc/pam.d/sshd
+	Ensure '@include common-auth' is removed from /etc/pam.d/sshd
 <pre>
 #@include common-auth
 @include common-password
@@ -19,11 +18,9 @@ auth required pam_google_authenticator.so
 sudo vim /etc/pam.d/sshd
 </pre>
 
-### /etc/ssh/sshd_config configuration
-
-#### Add the following to /etc/ssh/sshd_config
-
-#### KbdInteractiveAuthentication is defaulted 'no' 
+### /etc/ssh/sshd_config configuration:
+	Add the following to /etc/ssh/sshd_config
+	KbdInteractiveAuthentication is defaulted 'no' 
 <pre>
 UsePAM yes
 KbdInteractiveAuthentication yes
@@ -41,7 +38,7 @@ sudo systemctl restart sshd
 </pre>
 
 
-#### As {$USER} not as root run the following
+#### As {$USER} not as root run the following:
 <pre>
 google-authenticator
 </pre>
