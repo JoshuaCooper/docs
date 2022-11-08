@@ -5,7 +5,7 @@ sudo apt-get install libpam-google-authenticator -y
 </pre>
 
 ### /etc/pam.d/sshd configuration:
-  Add the following to /etc/pam.d/sshd
+  Add the following to /etc/pam.d/sshd</br >
   Ensure '@include common-auth' is removed from /etc/pam.d/sshd
 <pre>
 #@include common-auth
